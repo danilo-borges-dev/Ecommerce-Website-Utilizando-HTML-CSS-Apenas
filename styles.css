@@ -1,3 +1,4 @@
+/* REMOVER ESTILO PADRÂO */
 *,
 *::before,
 *::after {
@@ -7,8 +8,78 @@
   scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
-
-  /* GOOGLE FONTS */
-  font-family: "Jost", sans-serif;
   font-style: normal;
+}
+
+/* CORRIGE ICONES */
+.bx {
+  font-family: "boxicons" !important;
+  font-weight: normal;
+  font-style: normal;
+  speak: never;
+  line-height: 1;
+}
+
+/* FONTE GLOBAL DO SITE */
+body {
+  font-family: "Jost", sans-serif;
+}
+
+header {
+  position: fixed; /* Fixa o header no topo */
+  width: 100%; /* Ocupa 100% da largura da tela */
+  top: 0; /* Colado no topo */
+  right: 0; /* Colado à direita */
+  z-index: 1000; /* Fica acima de outros elementos */
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui espaço horizontal entre os itens */
+  padding: 20px 10%; /* Espaçamento interno: 20px em cima/baixo, 10% nas laterais */
+}
+
+.logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu a {
+  color: #2c2c2c; /* cor do texto */
+  font-size: 16px; /* tamanho da fonte */
+  text-transform: capitalize; /* primeira letra de cada palavra em maiúscula */
+  padding: 10px 20px; /* espaço interno ao redor do link */
+  font-weight: 400; /* peso da fonte (regular) */
+  transition: all 0.42s ease; /* animação suave em 0.42s ao passar o mouse */
+}
+
+.nav-menu a:hover {
+  color: #ee1c47;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon i {
+  margin-right: 20px;
+  color: #2c2c2c;
+  font-size: 25px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+
+.nav-icon i:hover {
+  transform: scale(1.1);
+  color: #ee1c47;
+}
+
+#menu-icon {
+  font-size: 35px; /* deixa o ícone bem visível */
+  color: #2c2c2c; /* cor do ícone (cinza escuro) */
+  z-index: 10001; /* coloca ele acima de outros elementos (até acima do header, que estava em 1000) */
+  cursor: pointer; /* transforma o cursor em "mãozinha" para indicar que é clicável */
 }
